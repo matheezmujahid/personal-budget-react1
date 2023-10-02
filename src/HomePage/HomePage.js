@@ -29,15 +29,13 @@ function HomePage() {
                             labels: labels,
                             datasets:[
                                 {
-                                    data: [],
+                                    data: data,
                                     backgroundColor: [
                                         '#EAC117',
                                         '#DC381F',
                                         '#6AA121',
                                         '#0020C2',
-                                        '#EDDA74',
-                                        '#FD349C',
-                                        '#57FEFF'
+                                        
                                     ],
                                 },
                             ],
@@ -140,7 +138,7 @@ function HomePage() {
 function drawD3DonutChart(data) {
     const width = 600;
     const height = 600;
-    const radius = (Math.min(width, height) / 3);
+    const radius = Math.min(width, height) / 3;
 
     const existingChart = d3.select('#myD3Chart svg');
     if (!existingChart.empty()) {
